@@ -1,6 +1,70 @@
-$currentColor: #0275d8;
+.grid-item {
+  width: 25%;
+  padding: 2px;
+}
 
-body {
-  background-color: #F8F8F8;
-  color: $currentColor;
+.card-black {
+  border-radius: 0px;
+  margin-bottom: 2rem;
+}
+
+.card-content-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.video-thumbnail:hover .thumbnail-play-button {
+  background-color: #0275d8;
+}
+
+.thumbnail-play-button {
+  margin-left: -1em;
+  margin-top: -1em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 8px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 1.2em;
+  border-radius: 100%;
+  -webkit-transition: border-color .4s,outline .4s,background-color .4s;
+  -moz-transition: border-color .4s,outline .4s,background-color .4s;
+  -ms-transition: border-color .4s,outline .4s,background-color .4s;
+  -o-transition: border-color .4s,outline .4s,background-color .4s;
+  transition: border-color .4s,outline .4s,background-color .4s
+}
+
+.play-button-left {
+  top: -50px;
+  left: 10%;
+}
+
+
+.video-thumbnail {
+  position: relative;
+}
+
+.card-content-overlay {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: opacity 400ms;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.video-thumbnail:hover .card-content-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  border-radius: 0%;
 }
