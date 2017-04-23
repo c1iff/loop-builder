@@ -4,15 +4,21 @@ import { connect } from 'react-redux';
 import LoopBlock from '../components/loop-block';
 
 class Loop extends Component {
+
   renderLoop() {
-    return this.props.loopData.map( (data) => {
-      return <LoopBlock data={data} key={data.id} />
-    })
+
+    if (!this.props.loopType) {
+      return <h3>Select a loop type from the side bar</h3>
+    } else {
+      return this.props.loopData.map( (data) => {
+        return <LoopBlock data={data} loopType={this.props.loopType} key={data.id} />
+      })
+    }
   }
+
   render() {
     return (
       <div>
-        <h3>Loop</h3>
         <div className="row">
           {this.renderLoop()}
         </div>
@@ -22,7 +28,7 @@ class Loop extends Component {
 }
 
 function mapSateToProps(state) {
-  return { loopData: state.loopData };
+  return { loopData: state.loopData, loopType: state.loopType };
 }
 
 

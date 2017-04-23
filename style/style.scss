@@ -84,7 +84,7 @@
 }
 
 /* The navigation menu links */
-.side-bar a {
+.side-bar span {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -94,8 +94,9 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.side-bar a:hover, .offcanvas a:focus{
+.side-bar span:hover, .offcanvas span:focus{
   color: #f1f1f1;
+  cursor: default;
 }
 
 /* Position and style the close button (top right corner) */
@@ -116,7 +117,7 @@
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav span {font-size: 18px;}
 }
 
 #nav-toggle {
@@ -125,4 +126,9 @@
   top: 10px;
   left: 10px;
   font-size: 36px;
+}
+
+
+#nav-toggle:hover {
+  color: #818181;
 }

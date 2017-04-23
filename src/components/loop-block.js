@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 
-export default class LoopBlock extends Component {
-  render() {
+export default (props) => {
+
     return (
-      <div id="block_{{ current_block.id }}" className="col-md-4 col-lg-3">
-        <div className="card">
-          <a className="video-thumbnail img-fluid" href="#">
-            <img className="img-fluid" src={this.props.data.link} alt="Vido poster" />
-            <button className="thumbnail-play-button"><i className="fa fa-play play-button"></i></button>
-          </a>
-          <div className="py-1">
-            <h4 className="card-title">{this.props.data.title}</h4>
-            <small><p className="card-text text-muted">{this.props.data.description}</p></small>
+      <div id="block_{{ current_block.id }}" className={props.loopType.column}>
+        <div className={props.loopType.card}>
+          <div className={props.loopType.innerDiv}>
+            <a className={props.loopType.anchor} href={props.data.link}>
+              <img className={props.loopType.image} src={props.data.link} alt="Vido poster" />
+              <button className={props.loopType.button}><i className="fa fa-play play-button"></i></button>
+            </a>
+            <div className={props.loopType.description}>
+              <h4 className={props.loopType.descriptionTitle}>{props.data.title}</h4>
+              <small><p className={props.loopType.descriptionText}>{props.data.description}</p></small>
+            </div>
           </div>
-          <a href="#" className="btn btn-outline-warning">More Info</a>
+          <div className={props.loopType.customContent[0]}>{props.loopType.customContent[1]}</div>
         </div>
       </div>
     );
-  }
+
 }
