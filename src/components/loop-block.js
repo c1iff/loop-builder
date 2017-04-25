@@ -19,6 +19,7 @@ export default (props) => {
             </div>
           </div>
         </div>
+        <div className={loopType.customContent}></div>
       </div>
     );
 }

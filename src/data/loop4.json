@@ -1,5 +1,5 @@
 {
-  "column": "col-md-12",
+  "column": "col-md-12 mb-3",
   "card": "card-black",
   "innerDiv": "horizontal-card d-inline-block",
   "anchor": "video-thumbnail img-fluid",
@@ -7,6 +7,6 @@
   "button": "thumbnail-play-button",
   "description": "d-flex",
   "descriptionTitle": "card-text text-center invisible",
-  "descriptionText": "card-text mt-4",
+  "descriptionText": "card-text mt-3",
   "customContent": "test"
 }

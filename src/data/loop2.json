@@ -8,5 +8,5 @@
   "description": "align-right m-3",
   "descriptionTitle": "card-title",
   "descriptionText": "card-text",
-  "customContent": "spacer"
+  "customContent": "section-line-center align-self-center my-2"
 }
