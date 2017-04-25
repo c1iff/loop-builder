@@ -1,0 +1,12 @@
+{
+  "column": "col-md-4 my-3",
+  "card": "d-inline-block",
+  "innerDiv": "",
+  "anchor": "video-thumbnail img-fluid",
+  "image": "img-fluid",
+  "button": "thumbnail-play-button play-button-left",
+  "description": "card-content-overlay text-white text-center pb-1",
+  "descriptionTitle": "card-title",
+  "descriptionText": "card-text text-muted",
+  "customContent": ""
+}

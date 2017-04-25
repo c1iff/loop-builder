@@ -1,0 +1,12 @@
+{
+  "column": "col-md-12",
+  "card": "card-black",
+  "innerDiv": "horizontal-card d-inline-block",
+  "anchor": "video-thumbnail w-25 mr-3",
+  "image": "img-fluid",
+  "button": "thumbnail-play-button",
+  "description": "align-right py-1",
+  "descriptionTitle": "card-text",
+  "descriptionText": "card-text text-muted",
+  "customContent": "spacer"
+}

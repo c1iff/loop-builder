@@ -17,7 +17,7 @@ export default class App extends Component {
   }
 
   openNav() {
-    document.getElementById("my-side-bar").style.width = "250px";
+    document.getElementById("my-side-bar").style.width = "15%";
   }
 
   closeNav() {
@@ -28,6 +28,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <h1 className="text-center display-4">Loop Builder</h1>
+        <hr className="my-4" />
         <span onClick={this.openNav}><i id="nav-toggle" className="fa fa-bars" aria-hidden="true"></i></span>
         <SideBar closeNav={this.closeNav} onLoopSelect={this.onLoopSelect}/>
         <Loop />
