@@ -8,6 +8,11 @@ import LoopBlock from '../components/loop-block';
 
 
 class Loop extends Component {
+  constructor(props) {
+    super(props);
+
+    this.setStyleAttribute = this.setStyleAttribute.bind(this);
+  }
 
   componentWillMount() {
     this.props.getLoopData()
@@ -28,14 +33,21 @@ class Loop extends Component {
     }
   }
 
+  setStyleAttribute(newStyle) {
+    const newStyleState = this.props.loopStyle
+    newStyleState[Object.keys(newStyle)[0]] = newStyle[Object.keys(newStyle)[0]]
+    this.props.setLoopStyle(newStyleState)
+    this.setState({})
+  }
+
   render() {
     return (
       <div>
-        <button className="btn btn-outline-primary" onClick={() => this.props.setLoopStyle({backgroundColor: 'bg-inverse'})}>Black Background</button>
-        <button className="btn btn-outline-primary" onClick={() => this.props.setLoopStyle({backgroundColor: ''})}>White Background</button>
-        <button className="btn btn-outline-primary" onClick={() => this.props.setLoopStyle({backgroundColor: 'bg-primary'})}>Blue Background</button><br /><br />
-        <button className="btn btn-outline-primary" onClick={() => this.props.setLoopStyle({backgroundColor: 'bg-primary', alignment: 'float-left'})}>Left Align</button>
-        <button className="btn btn-outline-primary" onClick={() => this.props.setLoopStyle({backgroundColor: 'bg-primary', alignment: 'float-right'})}>Right Align</button>
+        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: 'bg-inverse'})}>Black Background</button>
+        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: ''})}>White Background</button>
+        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: 'bg-primary'})}>Blue Background</button><br /><br />
+        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({alignment: 'float-left'})}>Left Align</button>
+        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({alignment: 'float-right'})}>Right Align</button>
         <div className="row">
           {this.renderLoop()}
         </div>
