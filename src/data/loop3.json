@@ -7,6 +7,6 @@
   "button": "thumbnail-play-button play-button-left",
   "description": "card-content-overlay text-white text-center pb-1",
   "descriptionTitle": "card-title",
-  "descriptionText": "card-text text-muted",
+  "descriptionText": "card-text",
   "customContent": ""
 }

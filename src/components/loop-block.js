@@ -14,8 +14,8 @@ export default (props) => {
               <button className={loopType.button}><i className="fa fa-play play-button"></i></button>
             </a>
             <div className={loopType.description}>
-              <h4 className={loopType.descriptionTitle}>{props.data.title}</h4>
-              <small><p className={loopType.descriptionText}>{props.data.description}</p></small>
+              <h4 className={`${loopType.descriptionTitle} ${loopStyle.title}`}>{props.data.title}</h4>
+              <small><p className={`${loopType.descriptionText} ${loopStyle.text}`}>{props.data.description}</p></small>
             </div>
           </div>
         </div>

@@ -5,8 +5,8 @@
   "anchor": "video-thumbnail img-fluid",
   "image": "img-fluid",
   "button": "thumbnail-play-button",
-  "description": "align-right py-1",
-  "descriptionTitle": "card-text",
-  "descriptionText": "card-text text-muted",
+  "description": "d-flex",
+  "descriptionTitle": "card-text text-center invisible",
+  "descriptionText": "card-text mt-4",
   "customContent": "test"
 }

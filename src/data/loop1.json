@@ -1,12 +1,12 @@
 {
   "column": "col-md-4 col-lg-3",
-  "card": "card",
+  "card": "card-black mb-4",
   "innerDiv": "",
   "anchor": "video-thumbnail img-fluid",
   "image": "img-fluid",
   "button": "thumbnail-play-button",
   "description": "py-1",
-  "descriptionTitle": "card-text",
-  "descriptionText": "card-text text-muted p-1",
+  "descriptionTitle": "card-text p-1",
+  "descriptionText": "card-text p-1",
   "customContent": "button"
 }

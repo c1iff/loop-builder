@@ -46,8 +46,12 @@ class Loop extends Component {
         <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: 'bg-inverse'})}>Black Background</button>
         <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: ''})}>White Background</button>
         <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({backgroundColor: 'bg-primary'})}>Blue Background</button><br /><br />
-        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({alignment: 'float-left'})}>Left Align</button>
-        <button className="btn btn-outline-primary" onClick={() => this.setStyleAttribute({alignment: 'float-right'})}>Right Align</button>
+        <button className="btn btn-outline-success" onClick={() => this.setStyleAttribute({alignment: 'float-left'})}>Left Align</button>
+        <button className="btn btn-outline-success" onClick={() => this.setStyleAttribute({alignment: 'float-right'})}>Right Align</button><br /><br />
+        <button className="btn btn-outline-danger" onClick={() => this.setStyleAttribute({title: ''})}>Black Heading</button>
+        <button className="btn btn-outline-danger" onClick={() => this.setStyleAttribute({title: 'text-white'})}>White Heading</button><br /><br />
+        <button className="btn btn-outline-secondary" onClick={() => this.setStyleAttribute({text: 'text-muted'})}>Grey Text</button>
+        <button className="btn btn-outline-secondary" onClick={() => this.setStyleAttribute({text: 'text-white'})}>White Text</button><br /><br />
         <div className="row">
           {this.renderLoop()}
         </div>
