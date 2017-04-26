@@ -23,9 +23,8 @@ class SideBar extends Component {
   }
 
   setStyleAttribute(newStyle) {
-
     this.props.setLoopStyle(newStyle)
-    this.setState({})
+    this.setState({menuOpen: false})
   }
 
   render() {

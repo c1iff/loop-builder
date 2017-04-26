@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getLoopData, setLoopStyle } from '../actions/index';
+import { getLoopData } from '../actions/index';
 
 import LoopBlock from '../components/loop-block';
 
@@ -11,7 +11,6 @@ class Loop extends Component {
   constructor(props) {
     super(props);
 
-    this.setStyleAttribute = this.setStyleAttribute.bind(this);
   }
 
   componentWillMount() {
@@ -33,13 +32,6 @@ class Loop extends Component {
     }
   }
 
-  setStyleAttribute(newStyle) {
-    const newStyleState = this.props.loopStyle
-    newStyleState[Object.keys(newStyle)[0]] = newStyle[Object.keys(newStyle)[0]]
-    this.props.setLoopStyle(newStyleState)
-    this.setState({})
-  }
-
   render() {
     return (
       <div>
@@ -56,7 +48,7 @@ function mapSateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getLoopData, setLoopStyle }, dispatch);
+  return bindActionCreators({ getLoopData }, dispatch);
 }
 
 

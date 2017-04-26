@@ -1,3 +1,6 @@
+import { SET_LOOP_STYLE } from '../actions/index'
+
+
 const defaultStyle = {
   backgroundColor: "",
   alignment: "float-left",
@@ -8,11 +11,9 @@ const defaultStyle = {
 
 export default function(state = defaultStyle, action) {
   switch(action.type) {
-    case 'SET_LOOP_STYLE':
+    case SET_LOOP_STYLE:
 
-      const newStyleState = state
-      newStyleState[Object.keys(action.payload)[0]] = action.payload[Object.keys(action.payload)[0]]
-      return action.payload;
+      return Object.assign({}, state, action.payload);;
   }
 
   return  state
