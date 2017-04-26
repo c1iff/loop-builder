@@ -8,43 +8,63 @@ import OptionsMenu from './options-menu.js'
 class SideBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { menuOpen: false };
+    this.state = {menuOpen1: false,
+                  menuOpen2: false,
+                  menuOpen3: false,
+                  menuOpen4: false};
 
     this.toggleDropDown = this.toggleDropDown.bind(this);
     this.setStyleAttribute = this.setStyleAttribute.bind(this);
   }
 
-  toggleDropDown() {
-    if (this.state.menuOpen === false) {
-      this.setState({menuOpen: true});
-    } else {
-      this.setState({menuOpen: false});
-    }
+  toggleDropDown(currentMenu) {
+    this.setState(Object.assign({}, this.state, currentMenu))
   }
 
   setStyleAttribute(newStyle) {
     this.props.setLoopStyle(newStyle)
-    this.setState({menuOpen: false})
   }
 
   render() {
     return (
-      <div id="my-side-bar" className="side-bar" onClick={this.props.closeNav}>
-        <span className="closebtn" ><i className="fa fa-times" aria-hidden="true"></i></span>
-          <div onMouseEnter={this.toggleDropDown} onMouseLeave={this.toggleDropDown}>
+      <div id="my-side-bar" className="side-bar">
+        <span className="closebtn" onClick={this.props.closeNav}><i className="fa fa-times" aria-hidden="true"></i></span>
+          <div onClick={() => this.toggleDropDown({menuOpen1: true})} onMouseLeave={() => this.toggleDropDown({menuOpen1: false})}>
             <span
               onClick={() => this.props.selectLoopType({loopType: 'loop1'})}
               data-toggle="collapse" href="#collapseExample"
               aria-expanded="false" aria-controls="collapseExample">
               Loop 1
             </span>
-            <OptionsMenu menuOpen={this.state.menuOpen} setStyleAttribute={this.setStyleAttribute} />
+            <OptionsMenu menuOpen={this.state.menuOpen1} setStyleAttribute={this.setStyleAttribute} />
           </div>
-
-
-        <span onClick={() => this.props.selectLoopType({loopType: 'loop2'})}>Loop 2</span>
-        <span onClick={() => this.props.selectLoopType({loopType: 'loop3'})}>Loop 3</span>
-        <span onClick={() => this.props.selectLoopType({loopType: 'loop4'})}>Loop 4</span>
+          <div onClick={() => this.toggleDropDown({menuOpen2: true})} onMouseLeave={() => this.toggleDropDown({menuOpen2: false})}>
+            <span
+              onClick={() => this.props.selectLoopType({loopType: 'loop2'})}
+              data-toggle="collapse" href="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Loop 2
+            </span>
+            <OptionsMenu menuOpen={this.state.menuOpen2} setStyleAttribute={this.setStyleAttribute} />
+          </div>
+          <div onClick={() => this.toggleDropDown({menuOpen3: true})} onMouseLeave={() => this.toggleDropDown({menuOpen3: false})}>
+            <span
+              onClick={() => this.props.selectLoopType({loopType: 'loop3'})}
+              data-toggle="collapse" href="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Loop 3
+            </span>
+            <OptionsMenu menuOpen={this.state.menuOpen3} setStyleAttribute={this.setStyleAttribute} />
+          </div>
+          <div onClick={() => this.toggleDropDown({menuOpen4: true})} onMouseLeave={() => this.toggleDropDown({menuOpen4: false})}>
+            <span
+              onClick={() => this.props.selectLoopType({loopType: 'loop4'})}
+              data-toggle="collapse" href="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Loop 4
+            </span>
+            <OptionsMenu menuOpen={this.state.menuOpen4} setStyleAttribute={this.setStyleAttribute} />
+          </div>
       </div>
     );
   }
