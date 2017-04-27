@@ -10,7 +10,7 @@ Use this app to build UI blocks for the Sitecast platform.
 
 2. Change directory to `builder`, and install dependencies:
 
-        $ cd starter
+        $ cd builder
         $ npm install
 
 3. Start the web server:
@@ -27,6 +27,7 @@ Use this app to build UI blocks for the Sitecast platform.
 
 
 ## Use Docker
+Install Docker: https://docs.docker.com/engine/installation/ 
 
 To use Docker, follow these commands:
 
