@@ -25,6 +25,17 @@ Use this app to build UI blocks for the Sitecast platform.
 
     * [Sitecast Getting Started](http://sitecast.com)
 
+
+## Use Docker
+
+To use Docker, follow these commands:
+
+```
+docker-compose build
+
+docker-compose up
+```
+
 ## Creating Custom Blocks
 
 ** work in progress
