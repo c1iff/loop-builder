@@ -6,22 +6,15 @@ import Loop from '../containers/loop.js';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loopType: 'Loop-1' };
+    this.state = {
+      loopType: 'Loop-1'
+    };
 
     this.onLoopSelect = this.onLoopSelect.bind(this);
   }
 
   onLoopSelect(loop) {
     this.setState(loop)
-    this.closeNav()
-  }
-
-  openNav() {
-    document.getElementById("my-side-bar").style.width = "15%";
-  }
-
-  closeNav() {
-    document.getElementById("my-side-bar").style.width = "0";
   }
 
   render() {
@@ -30,7 +23,7 @@ export default class App extends Component {
         <h1 className="text-center display-4">Loop Builder</h1>
         <hr className="my-4" />
         <span onClick={this.openNav}><i id="nav-toggle" className="fa fa-bars" aria-hidden="true"></i></span>
-        <SideBar closeNav={this.closeNav} onLoopSelect={this.onLoopSelect}/>
+        <SideBar onLoopSelect={this.onLoopSelect}/>
         <Loop />
       </div>
     );

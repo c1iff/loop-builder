@@ -43,7 +43,6 @@
   left: 10%;
 }
 
-
 .video-thumbnail {
   position: relative;
 }
@@ -68,10 +67,9 @@
   border-radius: 0%;
 }
 
-
 .side-bar {
   height: 100%;
-  width: 200px;
+  width: 0px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -80,6 +78,10 @@
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+}
+
+.nav-open {
+  width: 200px;
 }
 
 .side-bar span {
@@ -93,7 +95,6 @@
 
 .menu-item {
   border-bottom:solid 1px #555;
-
 }
 
 
@@ -144,4 +145,8 @@
   cursor: default;
   list-style: none;
   color: #0275d8;
+}
+
+.text-menu-option:hover {
+  color: #f1f1f1;
 }
